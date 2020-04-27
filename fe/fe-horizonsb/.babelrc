@@ -1,0 +1,46 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "react",
+    "stage-2"
+  ],
+  "plugins": [
+    ["styled-components"],
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "components": "./app/components",
+          "containers": "./app/containers",
+          "pages": "./app/pages",
+          "styles": "./app/styles",
+          "utils": "./app/utils",
+          "assets": "./app/assets",
+          "actions": "./app/actions",
+          "services": "./app/services",
+          "selectors": "./app/selectors",
+          "hooks": "./app/hooks",
+          "libs": "./node_modules"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-remove-prop-types",
+        "transform-react-constant-elements",
+        "transform-react-inline-elements"
+      ]
+    },
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs", "dynamic-import-node"]
+    }
+  }
+}

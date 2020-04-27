@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>horizonsb-be.services</AssemblyName>
+    <RootNamespace>horizonsb.be.services</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Exceptions\Api\**" />
+    <EmbeddedResource Remove="Exceptions\Api\**" />
+    <None Remove="Exceptions\Api\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\horizonsb-be.contracts\horizonsb-be.contracts.csproj" />
+    <ProjectReference Include="..\horizonsb-be.repository\horizonsb-be.repository.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>horizonsb-be.model</AssemblyName>
+    <RootNamespace>horizonsb.be.model</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\horizonsb-common.infrastructure\horizonsb-common.infrastructure.csproj" />
+    <ProjectReference Include="..\horizonsb-commons.vm\horizonsb-commons.vm.csproj" />
+  </ItemGroup>
+
+</Project>
